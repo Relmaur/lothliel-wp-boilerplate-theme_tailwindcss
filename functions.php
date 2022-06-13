@@ -18,5 +18,23 @@ function theme_files() {
     wp_enqueue_script('theme_main_js');
 
 }
-
 add_action('wp_enqueue_scripts', 'theme_files');
+
+
+function theme_functionality() {
+
+    add_theme_support( 'title-tag' );
+
+    register_nav_menu('primary', 'Primary Menu');
+
+}
+add_action('after_setup_theme', 'theme_functionality');
+
+/*
+    ============================== 
+        Theme's Walker Nav Menu 
+    ==============================
+*/
+
+require get_template_directory() . '/inc/walker.php';
+/* require get_template_directory() . '/inc/test.php'; */

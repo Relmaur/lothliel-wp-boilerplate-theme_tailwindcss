@@ -6,7 +6,20 @@ module.exports = {
     "../*.php",
   ]),
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': ['Montserrat', 'Helvetica', 'Arial'] 
+    }, 
+    extend: {
+      keyframes: {
+        grow: {
+          'from': { width: '0%' },
+          'to': { width: '100%'},
+        }
+      },
+      animation: {
+        grow: 'grow 200ms ease-in-out forwards',
+      },
+    },
   },
   plugins: [],
 }
