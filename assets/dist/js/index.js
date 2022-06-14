@@ -8,6 +8,12 @@
 /***/ (() => {
 
 // alert("Hello, world!");
+var dropdown = document.querySelector('.fas.fa-bars');
+dropdown.addEventListener('click', function () {
+  document.querySelector('nav ul').classList.toggle('hidden');
+  document.querySelector('nav ul').classList.toggle('left-[calc(100%+120px)]');
+  document.querySelector('nav ul').classList.toggle('left-[calc(100%-200px)]');
+});
 
 /***/ }),
 

@@ -23,7 +23,7 @@ class Walker_Nav_Primary_Lothliel extends Walker_Nav_Menu {
 
         /* Add Tailwind class so that the current page is underlined by the :after element */
         if (in_array('current-menu-item', $classes)) {
-            $classes[] = 'after:w-full';
+            $classes[] = 'after:w-1/2 md:after:w-full';
         } else {
             $classes[] = 'after:w-0';
         }
@@ -35,15 +35,15 @@ class Walker_Nav_Primary_Lothliel extends Walker_Nav_Menu {
         if (!empty($children)) {
             $classes[] = 'has-sub';
         } */
-        if ( $args->has_children )
-        $class_names .= ' dropdown';
+        if (in_array('menu-item-has-children', $classes)) {
+            $classes[]= 'dropdown';
+        }
 
-         /* Grab the default wp nav classes */
-         $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ));
+        /* Grab the default wp nav classes */
+        $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ));
 
         /* Show Tailwind's utility classes... */
-        $class_names = ' class="' . esc_attr( $class_names ) . ' hover:cursor-pointer after:content-[\'\'] after:block after:h-[3px] after:bg-black hover:after:animate-grow' . '"';
-
+        $class_names = ' class="' . esc_attr( $class_names ) . ' relative hover:cursor-pointer after:content-[\'\'] after:block after:h-[3px] after:bg-black hover:after:animate-grow' . '"';
 
         $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
         $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';

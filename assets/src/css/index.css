@@ -1,3 +1,48 @@
-@tailwind base; 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*========== Dropdown Submenu Styling ==========*/
+.dropdown ul {
+    display: none;
+    opacity: 0;
+    transition: all 500ms ease;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+    padding: 10px;
+    width: 120px;
+}
+
+.dropdown:hover>ul {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    background-color: white;
+    border: 0.5px solid black;
+    color: black;
+}
+
+.dropdown:hover>ul li:not(:last-child) {
+    margin: 0 0 10px 0;
+}
+
+.dropdown:hover>ul li:hover {
+    color: #94a3b8;
+}
+
+@media(max-width: 768px) {
+    .dropdown ul {
+        top: 0;
+        right: calc(100%);
+    }
+}
+
+.left-0 {
+    left: 0;
+}
+.left-\[calc\(100\%\-200px\)\] {
+    left: calc(100% - 200px);
+}
+/*========== ...Dropdown Menu Styling ==========*/
