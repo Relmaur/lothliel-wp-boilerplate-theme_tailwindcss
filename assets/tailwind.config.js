@@ -11,13 +11,18 @@ module.exports = {
     }, 
     extend: {
       keyframes: {
-        grow: {
+        'grow-full': {
           'from': { width: '0%' },
           'to': { width: '100%'},
+        },
+        'grow-half': {
+          'from': { width: '0%' },
+          'to': { width: '50%'},
         }
       },
       animation: {
-        grow: 'grow 200ms ease-in-out forwards',
+        'grow-full': 'grow-full 200ms ease-in-out forwards',
+        'grow-half': 'grow-half 200ms ease-in-out forwards',
       },
     },
   },

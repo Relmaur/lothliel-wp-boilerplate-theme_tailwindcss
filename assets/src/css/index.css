@@ -29,7 +29,7 @@
 }
 
 .dropdown:hover>ul li:hover {
-    color: #94a3b8;
+    color: #3D3D3D;
 }
 
 @media(max-width: 768px) {
@@ -37,12 +37,18 @@
         top: 0;
         right: calc(100%);
     }
+
+    .dropdown:hover>ul li:hover::after {
+        display: none;
+    }
 }
 
 .left-0 {
     left: 0;
 }
+
 .left-\[calc\(100\%\-200px\)\] {
     left: calc(100% - 200px);
 }
+
 /*========== ...Dropdown Menu Styling ==========*/

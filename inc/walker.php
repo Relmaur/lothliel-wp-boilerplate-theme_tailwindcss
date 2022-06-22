@@ -43,7 +43,7 @@ class Walker_Nav_Primary_Lothliel extends Walker_Nav_Menu {
         $class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ));
 
         /* Show Tailwind's utility classes... */
-        $class_names = ' class="' . esc_attr( $class_names ) . ' relative hover:cursor-pointer after:content-[\'\'] after:block after:h-[3px] after:bg-black hover:after:animate-grow' . '"';
+        $class_names = ' class="' . esc_attr( $class_names ) . ' relative hover:cursor-pointer after:content-[\'\'] after:block after:h-[3px] after:bg-black md:hover:after:animate-grow-full hover:after:animate-grow-half' . '"';
 
         $id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
         $id = $id ? ' id="' . esc_attr( $id ) . '"' : '';

@@ -11,11 +11,16 @@ function theme_files() {
     wp_register_style('desktop_theme_styles', get_template_directory_uri() . '/assets/dist/css/index.css', [], 1);
     wp_enqueue_style('desktop_theme_styles');
 
+    wp_register_style('font_awesome', 'https://kit.fontawesome.com/6c639c9033.js', [], 1);
+    wp_enqueue_style('font_awesome');
+
     //===== Js =====//
 
     //----- Main Js file (Example) -----//
     wp_register_script('theme_main_js', get_template_directory_uri() . '/assets/dist/js/index.js', array(), 1.0, true);
     wp_enqueue_script('theme_main_js');
+
+   
 
 }
 add_action('wp_enqueue_scripts', 'theme_files');
