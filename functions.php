@@ -15,18 +15,24 @@ function theme_files() {
     wp_enqueue_style('font_awesome');
 
     //===== Js =====//
-
     //----- Main Js file (Example) -----//
     wp_register_script('theme_main_js', get_template_directory_uri() . '/assets/dist/js/index.js', array(), 1.0, true);
-    wp_enqueue_script('theme_main_js');
-
-   
+    wp_enqueue_script('theme_main_js');   
 
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 
-
+/*
+    ============================== 
+        Theme's Capabilies 
+    ==============================
+*/
 function theme_functionality() {
+
+    add_theme_support('custom-logo', array(
+        'width' => 215,
+        'height' => 66
+    ));
 
     add_theme_support( 'title-tag' );
 
@@ -37,9 +43,16 @@ add_action('after_setup_theme', 'theme_functionality');
 
 /*
     ============================== 
+        Theme's Customizer
+    ==============================
+*/
+require get_template_directory() . '/inc/customizer.php';
+
+/*
+    ============================== 
         Theme's Walker Nav Menu 
     ==============================
 */
-
 require get_template_directory() . '/inc/walker.php';
 /* require get_template_directory() . '/inc/test.php'; */
+

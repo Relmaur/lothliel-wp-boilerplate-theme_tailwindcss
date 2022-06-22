@@ -18,10 +18,34 @@
                     <a href="<?php echo get_home_url() ?>">Logo</a>
                 </h2>
                 <div class="socialnetworks pt-5 flex gap-x-3 text-xl absolute">
-                    <i class="fa-brands fa-facebook text-black  hover:cursor-pointer"></i>
+
+                    <?php if (get_theme_mod('loth-themeinfo-display-facebook') == 'Yes') : ?>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook text-black  hover:cursor-pointer"></i>
+                        </a>
+                    <?php endif; ?>
+                    <?php if (get_theme_mod('loth-themeinfo-display-twitter') == 'Yes') : ?>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter text-black  hover:cursor-pointer"></i>
+                        </a>
+                    <?php endif; ?>
+                    <?php if (get_theme_mod('loth-themeinfo-display-instagram') == 'Yes') : ?>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram text-black  hover:cursor-pointer"></i>
+                        </a>
+                    <?php endif; ?>
+                    <?php if (get_theme_mod('loth-themeinfo-display-linkedin') == 'Yes') : ?>
+                        <a href="#">
+                            <i class="fa-brands fa-linkedin text-black  hover:cursor-pointer"></i>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php /* Hardcoded socmed... */ ?>
+                    <!-- <i class="fa-brands fa-facebook text-black  hover:cursor-pointer"></i>
                     <i class="fa-brands fa-twitter text-black  hover:cursor-pointer"></i>
                     <i class="fa-brands fa-instagram text-black  hover:cursor-pointer"></i>
-                    <i class="fa-brands fa-linkedin text-black  hover:cursor-pointer"></i>
+                    <i class="fa-brands fa-linkedin text-black  hover:cursor-pointer"></i> -->
+
                 </div>
             </div>
             <nav class="mt-[3px] flex flex-col justify-center items-center md:flex-row">
@@ -38,7 +62,7 @@
                     'after' => ''
                 )) ?>
 
-                <?php /* Hardcoded Menu... */ ?>
+                    
                 <!-- <ul class="relative flex justify-center items-center gap-x-3 text-xs">
                     <li class="after:content-[''] after:block after:w-full after:h-[3px] after:bg-black hover:cursor-pointer first:hidden">Home</li>
                     <li class="hover:cursor-pointer after:content-[''] after:block after:w-0 after:h-[3px] after:bg-black hover:after:animate-grow">Services</li>

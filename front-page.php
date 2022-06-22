@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
-
-<section class="hero w-full border-b border-black pb-20 md:pb-40">
-    <div class="container mx-auto py-[20%] sm:py-[10%] max-w-[1200px] flex flex-col items-center justify-between gap-y-6 sm:flex-row sm:justify-center sm:items-center sm:px-20">
+<section class="hero w-full border-b border-black pb-10 md:pb-20">
+    <div class="container mx-auto py-[20%] sm:pt-[10%] sm:pb-[5%] max-w-[1200px] flex flex-col items-center justify-between gap-y-6 sm:flex-row sm:justify-center sm:items-center sm:px-20">
 
         <div class="w-[80%] md:w-1/2 text-center px-10 flex flex-col items-center gap-y-8 sm:text-start sm:pr-12">
             <h2 class="flex justify-center text-4xl md:text-6xl font-black text-black">Awesome Copy.<br> Awesome</h2>
@@ -15,7 +14,6 @@
 
     </div>
 </section>
-
 
 <section class="cards w-full flex border-b border-black flex-col justify-center items-center py-20 mb:py-40">
 
